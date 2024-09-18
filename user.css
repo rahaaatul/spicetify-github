@@ -1,0 +1,69 @@
+:root {
+    --border-color: #30363d;
+}
+
+/* Border */
+.Root__main-view, /* Main Page */
+.main-nowPlayingBar-nowPlayingBar, /* Bottom Bar */
+.ffFwfKcPDbmAPLXzxzKq, /* Right Side Bar */
+.main-yourLibraryX-entryPoints { /* Left Side Bar */
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--encore-border-width-thicker) !important;
+    background-color: #0d1117 !important;
+}
+
+.SFAoASy0S_LZJmYZ3Fh9, /* Search Bar */
+.main-globalNav-link-icon { /* Top Bar Icons */
+    border: 1px solid var(--border-color) !important;
+    border-radius: 100px !important;
+    background-color: #0d1117 !important;
+}
+
+/* Expand Now Playing Bar */
+.main-nowPlayingBar-nowPlayingBar {
+    padding: 50px 10px !important;
+}
+
+/* Playback bar width */
+.playback-bar {
+    width: 85% !important;
+}
+
+/* Hide Scroll Bar */
+.os-theme-spotify.os-scrollbar {
+    display: none;
+}
+
+.main-entityHeader-backgroundColor {
+    display: none !important;
+}
+
+.main-actionBarBackground-background {
+    display: none !important;
+}
+
+.main-home-homeHeader {
+    display: none !important;
+}
+
+/* .main-topBar-container {
+    display: none;
+    background-color: #0d1117 !important;
+    position: fixed;
+} */
+
+/* .main-trackList-trackListHeader.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
+    top: 0px !important;
+} */
+
+/* .marketplace-header {
+    margin: 3% auto;
+}
+ */
+.main-topBar-background {
+    background-color: #0d1117 !important
+}
+
+.marketplace-card--installed {
+    border: 1px solid var(--border-color) !important;
+}
