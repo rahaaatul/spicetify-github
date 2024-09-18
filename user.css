@@ -26,14 +26,15 @@
 
 /* 
 >> Search Bar | Top Bar Icons
-- Highlight Icons with bright white inside blue border
+- Highlight Icons
 - Stop scaling on hover (because marketplace icon's border clips)
 */
-.SFAoASy0S_LZJmYZ3Fh9,
 .main-globalNav-link-icon:hover {
   transform: scale(1);
   color: white;
-  border: 1px solid var(--github-blue) !important;
+	background: var(--background-elevated-highlight);
+	-webkit-box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1);
+	box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1)
 }
 
 /* 
