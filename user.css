@@ -1,69 +1,96 @@
 :root {
-    --border-color: #30363d;
+  --github-background: #010409;
+  --github-blue: #1f6feb;
+  --github-border: #30363d;
+  --github-green: #3be477;
+  --github-main: #0d1117;
 }
 
-/* Border */
-.Root__main-view, /* Main Page */
-.main-nowPlayingBar-nowPlayingBar, /* Bottom Bar */
-.ffFwfKcPDbmAPLXzxzKq, /* Right Side Bar */
-.main-yourLibraryX-entryPoints { /* Left Side Bar */
-    border: 1px solid var(--border-color) !important;
-    border-radius: var(--encore-border-width-thicker) !important;
-    background-color: #0d1117 !important;
+/*
+>> Main Page | Bottom Bar | Right Side Bar | Left Side Bar
+>> Search Bar | Top Bar Icons
+- Add themed background
+- Add themed borders
+*/
+
+.Root__main-view,
+.main-nowPlayingBar-nowPlayingBar,
+.ffFwfKcPDbmAPLXzxzKq,
+.main-yourLibraryX-entryPoints,
+.SFAoASy0S_LZJmYZ3Fh9,
+.main-globalNav-link-icon {
+  background-color: var(--github-main) !important;
+  border-radius: var(--encore-border-width-thicker) !important;
+  border: 1px solid var(--github-border) !important;
 }
 
-.SFAoASy0S_LZJmYZ3Fh9, /* Search Bar */
-.main-globalNav-link-icon { /* Top Bar Icons */
-    border: 1px solid var(--border-color) !important;
-    border-radius: 100px !important;
-    background-color: #0d1117 !important;
+/* 
+>> Search Bar | Top Bar Icons
+- Highlight Icons with bright white inside blue border
+- Stop scaling on hover (because marketplace icon's border clips)
+*/
+.SFAoASy0S_LZJmYZ3Fh9,
+.main-globalNav-link-icon:hover {
+  transform: scale(1);
+  color: white;
+  border: 1px solid var(--github-blue) !important;
 }
 
-/* Expand Now Playing Bar */
-.main-nowPlayingBar-nowPlayingBar {
-    padding: 50px 10px !important;
+/* 
+>> Search Box
+- Highlight the search box with blue border
+*/
+.main-globalNav-searchInputContainer .SFAoASy0S_LZJmYZ3Fh9:focus,
+.x-filterBox-expandedOrHasFilter .x-filterBox-filterInput,
+.search-modal-searchBar {
+  -webkit-box-shadow: inset 0 0 0 1px var(--github-blue) !important;
+  border-radius: var(--encore-border-width-thicker) !important;
+  border: 1px solid var(--github-blue) !important;
+  box-shadow: inset 0 0 0 1px var(--github-blue) !important;
 }
 
-/* Playback bar width */
-.playback-bar {
-    width: 85% !important;
-}
-
-/* Hide Scroll Bar */
-.os-theme-spotify.os-scrollbar {
-    display: none;
-}
-
-.main-entityHeader-backgroundColor {
-    display: none !important;
-}
-
-.main-actionBarBackground-background {
-    display: none !important;
-}
-
-.main-home-homeHeader {
-    display: none !important;
-}
-
-/* .main-topBar-container {
-    display: none;
-    background-color: #0d1117 !important;
-    position: fixed;
-} */
-
-/* .main-trackList-trackListHeader.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
-    top: 0px !important;
-} */
-
-/* .marketplace-header {
-    margin: 3% auto;
-}
- */
-.main-topBar-background {
-    background-color: #0d1117 !important
-}
-
+/* 
+>> Marketplace List Items
+- Add themed border
+*/
 .marketplace-card--installed {
-    border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--github-border) !important;
+}
+
+/* 
+>> Expand Now Playing Bar 
+*/
+.main-nowPlayingBar-nowPlayingBar {
+  padding: 50px 10px !important;
+}
+
+/* 
+>> Playback bar width
+- Reduced, otherwise clashes with sorrounding items
+*/
+.playback-bar {
+  width: 85% !important;
+}
+
+/* 
+>> Hide Scroll Bar 
+- I hate scroll bars (but they are needed), so -
+- Let's just reduce the opacity
+*/
+.os-theme-spotify.os-scrollbar {
+  color: white;
+  opacity: 25%;
+}
+
+/* 
+>> Gradient View
+- No more ugly gradients in any view
+- Color is consistent with the theme 
+*/
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-background,
+.main-topBar-background,
+.main-home-homeHeader,
+.mjZrvVI3CxfHJXu7y0Lg {
+  background-color: var(--github-main) !important;
 }
