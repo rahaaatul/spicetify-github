@@ -8,17 +8,13 @@
 
 /*
 >> Main Page | Bottom Bar | Right Side Bar | Left Side Bar
->> Search Bar | Top Bar Icons
 - Add themed background
 - Add themed borders
 */
-
 .Root__main-view,
 .main-nowPlayingBar-nowPlayingBar,
 .ffFwfKcPDbmAPLXzxzKq,
-.main-yourLibraryX-entryPoints,
-.SFAoASy0S_LZJmYZ3Fh9,
-.main-globalNav-link-icon {
+.main-yourLibraryX-entryPoints {
   background-color: var(--github-main) !important;
   border-radius: var(--encore-border-width-thicker) !important;
   border: 1px solid var(--github-border) !important;
@@ -26,15 +22,23 @@
 
 /* 
 >> Search Bar | Top Bar Icons
-- Highlight Icons
-- Stop scaling on hover (because marketplace icon's border clips)
+- Add themed background
+- Add themed borders
 */
-.main-globalNav-link-icon:hover {
-  transform: scale(1);
-  color: white;
-	background: var(--background-elevated-highlight);
-	-webkit-box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1);
-	box-shadow: inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1)
+.SFAoASy0S_LZJmYZ3Fh9,
+.main-globalNav-link-icon {
+  background-color: var(--github-background) !important;
+  border-radius: var(--encore-border-width-thicker) !important;
+  border: 1px solid var(--github-border) !important;
+}
+
+/* 
+>> Search Bar
+- Stop inside shadow on Hover
+*/
+.SFAoASy0S_LZJmYZ3Fh9:hover {
+  -webkit-box-shadow: inset 0 0 0 0 !important;
+  box-shadow: inset 0 0 0 0 !important;
 }
 
 /* 
@@ -48,6 +52,16 @@
   border-radius: var(--encore-border-width-thicker) !important;
   border: 1px solid var(--github-blue) !important;
   box-shadow: inset 0 0 0 1px var(--github-blue) !important;
+}
+
+/* 
+>> Top Bar Icons > Home | Marketplace
+- Highlight Icons
+- Stop scaling on hover (because marketplace icon's border clips)
+*/
+.main-globalNav-link-icon:hover {
+  transform: scale(1);
+  background: var(--github-main);
 }
 
 /* 
