@@ -1,3 +1,4 @@
+/* @import "color.css"; */
 :root {
   --github-background: #010409;
   --github-blue: #1f6feb;
@@ -94,6 +95,11 @@
 */
 .os-theme-spotify.os-scrollbar {
   color: white;
+  opacity: 0%;
+}
+
+.os-theme-spotify.os-scrollbar:hover {
+  color: white;
   opacity: 25%;
 }
 
@@ -108,4 +114,12 @@
 .main-home-homeHeader,
 .mjZrvVI3CxfHJXu7y0Lg {
   background-color: var(--github-main) !important;
+}
+
+/*
+>> Remove beautiful lyrics background
+*/
+.BeautifulLyricsBackground:is(aside) .BeautifulLyricsBackground-Container {
+  filter: saturate(2) brightness(.7);
+  display: none;
 }
