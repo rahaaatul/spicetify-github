@@ -1,10 +1,11 @@
-/* @import "color.css"; */
+/* Github Theme */
 :root {
   --github-background: #010409;
   --github-blue: #1f6feb;
   --github-border: #30363d;
   --github-green: #3be477;
   --github-main: #0d1117;
+  --github-button-hover: #15191f;
 }
 
 /*
@@ -55,15 +56,7 @@
   box-shadow: inset 0 0 0 1px var(--github-blue) !important;
 }
 
-/* 
->> Top Bar Icons > Home | Marketplace
-- Highlight Icons
-- Stop scaling on hover (because marketplace icon's border clips)
-*/
-.main-globalNav-link-icon:hover {
-  transform: scale(1);
-  background: var(--github-main);
-}
+
 
 /* 
 >> Marketplace List Items
@@ -122,4 +115,188 @@
 .BeautifulLyricsBackground:is(aside) .BeautifulLyricsBackground-Container {
   filter: saturate(2) brightness(.7);
   display: none;
+}
+
+/*************************/
+/*** SEARCH BAR STYLES ***/
+/*************************/
+
+/* search bar border style */
+.b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar {
+  border: 1px solid var(--github-border) !important;
+  border-radius: var(--encore-border-width-thicker) !important;
+}
+
+
+/**************************/
+/*** BUTTONS ON TOP BAR ***/
+/**************************/
+
+/* notification count color  */
+.K8ygfuFNcx2tNcNv09JH {
+	color: var(--github-blue) !important;
+}
+
+/* marketplace icon */
+.main-globalNav-link-icon:hover {
+  transform: unset !important; /* Stop scaling on hover */
+  background-color: var(--github-button-hover) !important;
+}
+
+button[aria-label="Popup Lyrics"] svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* make popup lyrics button look like home button */
+.link-subtle.main-globalNav-historyButtons>div, .LedDBMWCxYhMD20KtPJo.main-actionButtons>div {
+  border-radius: var(--encore-border-width-thicker);
+  border: 1px solid var(--github-border);
+  display: flex;
+  height: auto;
+  justify-content: center;
+  width: 50px;
+
+  &:hover {
+    transform: unset;
+    color: var(--spice-subtext);
+    background-color: var(--github-button-hover);
+  }
+
+  &:svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* reduce the gap between marketplace button and popup lyrics button */
+.main-globalNav-historyButtonsContainer {
+  gap: 4px;
+  /* helps to align home & marketplace button picture perfectly by 8px each. */
+}
+
+.link-subtle.main-globalNav-historyButtons>div:nth-of-type(1) {
+  margin: 0 4px 0 112px;
+  /* moves popup lyrics and marketplace button from left to right to be with home button. */
+}
+
+/*************************
+Artist + Playlist Page Customizations
+*************************/
+
+/* remove extra shade */
+.EmeHQXR87mUskYK6xEde, .playlist-playlist-playlistContent {
+  isolation: unset;
+}
+
+/* Gradient */
+.D6IunHuzuULf_Sr88GOA, .playlist-playlist-playlist {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--spice-main) 350px);
+}
+
+/* Blurry Background */
+.main-entityHeader-background.main-entityHeader-gradient {
+  filter: blur(5px);
+}
+
+/***************************** 
+Marketplace App Customizations 
+*****************************/
+
+/* Card Image */
+.main-cardImage-imageWrapper {
+  background-color: var(--card-color, var(--spice-tab-active));
+  border-radius: unset;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  padding-bottom: unset;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  transition: 300ms;
+  filter: blur(75px); /* Blur Background */
+  opacity:0;
+}
+
+.main-card-card:hover .main-cardImage-imageWrapper {
+  opacity:1;
+}
+
+/* Add space after header */
+.marketplace-header {
+  position: relative;
+  margin: 0 0 80px 0;
+}
+
+/* Items per row */
+.marketplace-grid {
+  --minimumColumnWidth: 30%; /* 3 per row */
+}
+
+/* Add padding to each card */
+.main-card-cardMetadata {
+  padding: 16px;
+}
+
+/* Hide the overflow of each card */
+.main-card-card {
+  overflow: hidden;
+  padding: 0px;
+  position: sticky;
+}
+
+/* Marketplace Item Title */
+.main-cardHeader-text.main-type-balladBold {
+  color: var(--github-green);
+  font-size: x-large;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Card Description */
+p.marketplace-card-desc {
+  color: var(--spice-text);
+  text-align: start;
+}
+
+/* Recolor Card Date */
+p.marketplace-card-desc:nth-of-type(2) {
+  color: var(--spice-subtext);
+}
+
+/* Author + Stars */
+.marketplace-cardSubHeader {
+  color: var(--spice-subtext);
+  flex-direction: unset; /* make them side by side */
+  font-size: medium;
+}
+
+/* Recolor Install Extension Button */
+.button-module__circle___EZ88P_marketplace:nth {
+  background: var(--github-green);
+}
+
+/* Recolor Remove Extension Button */
+.button-module__circle___EZ88P_marketplace[aria-label="Remove"] {
+  background: red;
+  color: var(--spice-text)
+}
+
+/* Hide "Installed" Text */
+.marketplace-card__bottom-meta.main-type-mestoBold {
+  display: none;
+}
+
+/**********************
+Rearrange Sidebar Items
+**********************/
+
+/* Lyrics before everything */
+#BeautifulLyrics-CardView {
+  order: -2;
+}
+
+/* Next Song after lyrics card */
+.main-nowPlayingView-queueItem, .main-nowPlayingView-queue {
+  order: -1;
 }

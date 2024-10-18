@@ -1,0 +1,5 @@
+/* Search bar border style */
+.b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar {
+    border: 1px solid var(--github-border) !important;
+    border-radius: var(--encore-border-width-thicker) !important;
+  }

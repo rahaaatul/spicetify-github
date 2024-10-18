@@ -1,0 +1,88 @@
+  /*-------------*/
+  /* MarketPlace */
+  /*------------ */
+
+  /* Image */
+  .main-cardImage-imageWrapper {
+      background-color: var(--card-color, var(--spice-tab-active));
+      border-radius: unset;
+      -webkit-box-shadow: unset;
+      box-shadow: unset;
+      padding-bottom: unset;
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      transition: 300ms;
+      filter: blur(75px);
+      opacity: 0;
+  }
+
+  .main-card-card:hover .main-cardImage-imageWrapper {
+      opacity: 1;
+  }
+
+  /* Add space after header */
+  .marketplace-header {
+      position: relative;
+      margin: 0 0 80px 0;
+  }
+
+  /* Items per row */
+  .marketplace-grid {
+      --minimumColumnWidth: 30%;
+  }
+
+  /* Add padding to each card */
+  .main-card-cardMetadata {
+      padding: 16px;
+  }
+
+  /* Hide the overflow of each card */
+  .main-card-card {
+      overflow: hidden;
+      padding: 0px;
+      position: sticky;
+  }
+
+  /* Marketplace Item Title */
+  .main-cardHeader-text.main-type-balladBold {
+      color: var(--github-green);
+      font-size: x-large;
+      font-weight: bold;
+      text-transform: capitalize;
+  }
+
+  /* Card Description */
+  p.marketplace-card-desc {
+      color: var(--spice-text);
+      text-align: start;
+  }
+
+  /* Recolor Card Date */
+  p.marketplace-card-desc:nth-of-type(2) {
+      color: var(--spice-subtext);
+  }
+
+  /* Author + Stars */
+  .marketplace-cardSubHeader {
+      color: var(--spice-subtext);
+      flex-direction: unset;
+      /* make them side by side */
+      font-size: medium;
+  }
+
+  /* Recolor Install Extension Button */
+  .button-module__circle___EZ88P_marketplace:nth {
+      background: var(--github-green);
+  }
+
+  /* Recolor Remove Extension Button */
+  .button-module__circle___EZ88P_marketplace[aria-label="Remove"] {
+      background: red;
+      color: var(--spice-text)
+  }
+
+  /* Hide "Installed" Text */
+  .marketplace-card__bottom-meta.main-type-mestoBold {
+      display: none;
+  }

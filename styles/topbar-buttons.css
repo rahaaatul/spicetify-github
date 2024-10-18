@@ -1,0 +1,15 @@
+/* reduce the gap between marketplace button and popup lyrics button */
+.main-globalNav-historyButtonsContainer {
+    gap: 4px; /* helps to align home & marketplace button picture perfectly by 8px each. */
+}
+
+/* Make Popup lyrics button look like Home button */
+button[aria-label="Popup Lyrics"] {
+    border-radius: var(--encore-border-width-thicker);
+    border: 1px solid var(--github-border);
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 0 0 0 154px; /* moves buttons from left to right to be with home button. */
+    width: 50px;
+}

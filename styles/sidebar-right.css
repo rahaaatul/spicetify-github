@@ -1,0 +1,9 @@
+/* Rearrange Sidebar Items */
+
+#BeautifulLyrics-CardView {
+    order: -2;
+}
+
+.main-nowPlayingView-queueItem, .main-nowPlayingView-queue {
+    order: -1;
+}
